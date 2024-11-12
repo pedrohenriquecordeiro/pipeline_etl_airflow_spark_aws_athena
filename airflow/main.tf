@@ -11,7 +11,7 @@ terraform {
 
 # Define the path to the credentials file
 variable "credentials_file" {
-  default = "credentials.json"
+  default = "credentilas_file_aws/terraform_user_acessKeys.json"
 }
 
 # Read and parse the JSON config file
