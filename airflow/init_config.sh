@@ -42,3 +42,7 @@ aws configure set aws_access_key_id aws_access_key_emr
 aws configure set aws_secret_key aws_access_key_emr
 aws configure set default_region 'us-east-1'
 aws configure set output 'json'
+
+# REGISTRY THE DAG
+aws s3api get-object --bucket projeto-0003-phcj --key /code/spark/dag.py
+mv dag.py dags/
