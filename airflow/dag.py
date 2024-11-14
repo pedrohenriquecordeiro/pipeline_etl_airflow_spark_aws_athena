@@ -25,7 +25,16 @@ with DAG(
     # Bash command to copy files from one S3 bucket to another
     s3_copy_task = BashOperator(
         task_id='copy_s3_file',
-        bash_command='aws s3 cp s3://source-bucket-name/source-key s3://destination-bucket-name/destination-key',
+        bash_command='''
+            # Generate a timestamp
+            timestamp=$(date +"%Y%m%d%H%M%S") &&
+
+            # Create a file and write the timestamp into it
+            echo "$timestamp" > "${timestamp}.txt" &&
+
+            # Upload the file to S3
+            aws s3 cp "${timestamp}.txt" s3://projeto-0003-phcj/data
+        '''
     )
 
     s3_copy_task
