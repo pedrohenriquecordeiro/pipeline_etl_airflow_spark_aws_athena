@@ -2,3 +2,6 @@ airflow/credentials_file_aws/emr_user_accessKeys.json
 airflow/credentials_file_aws/terraform_user_acessKeys.json
 *.hcl
 airflow/.terraform/*
+*.info
+*.tfstate
+*.backup
