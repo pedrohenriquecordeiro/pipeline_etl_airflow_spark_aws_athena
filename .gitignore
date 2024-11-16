@@ -5,3 +5,6 @@ airflow/.terraform/*
 *.info
 *.tfstate
 *.backup
+airflow/credentials/emr_user_accessKeys.json
+airflow/credentials/env.json
+airflow/credentials/terraform_user_acessKeys.json
