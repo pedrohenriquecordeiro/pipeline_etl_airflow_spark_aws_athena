@@ -103,6 +103,7 @@ services:
     restart: always
 
   # https://hub.docker.com/r/openweb/git-sync/
+  # https://github.com/insight-infrastructure/airflow-docker-compose/blob/master/docker-compose.yml
   #git-sync:
   #  image: openweb/git-sync:0.0.1
   #  environment:
